@@ -2,10 +2,8 @@ import 'dart:math';
 import 'dart:ui' as ui;
 
 import 'package:collection/collection.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 import 'accessibility_issue.dart';
 import 'checker_manager.dart';
@@ -132,14 +130,14 @@ class _AccessibilityToolsState extends State<AccessibilityTools>
     ];
   }
 
-  late final _isTest = WidgetsBinding.instance is TestWidgetsFlutterBinding;
+  // late final _isTest = WidgetsBinding.instance is TestWidgetsFlutterBinding;
 
   @override
   Widget build(BuildContext context) {
-    if (!kDebugMode ||
-        (!AccessibilityTools.debugRunCheckersInTests && _isTest)) {
-      return widget.child!;
-    }
+    // if (!kDebugMode ||
+    //     (!AccessibilityTools.debugRunCheckersInTests && _isTest)) {
+    //   return widget.child!;
+    // }
 
     final actualChild = widget.child;
     if (actualChild == null) {
